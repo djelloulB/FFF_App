@@ -1,0 +1,25 @@
+<!-- <form #validationFormJoueur="ngForm" (ngSubmit)="joueurSubmit()">
+    <div class="form-group">
+        <label for="titre">Nom du joueur</label>
+        <input class="form-control" type="text" #validationTitre="ngModel" required name="nom" [(ngModel)]="joueurFormulaire.nom">
+        <div class="alert alert-danger" [hidden]="validationTitre.valid">Ce champs n'est pas valide</div>
+    </div>
+    <div class="form-group">
+        <label for="description">Prénom du joueur</label>
+        <input type="text" class="form-control" #validationDescription="ngModel" required name="description" [(ngModel)]="joueurFormulaire.prenom">
+        <div class="alert alert-danger" [hidden]="validationDescription.valid">Ce champs n'est pas valide</div>
+    </div>
+    <div class="form-group">
+        <label for="image">Photo du joueur</label>
+        <input class="form-control" #validationImage="ngModel" required name="image" [(ngModel)]="joueurFormulaire.image">
+        <div class="alert alert-danger" [hidden]="validationImage.valid">Ce champs n'est pas valide</div>
+    </div>
+    <div class="form-group">
+        <label for="">Poste</label>
+        <select class="form-control" required name="type" #validationType="ngModel" [(ngModel)]="joueurFormulaire.poste">
+            <option [value]="undefined">Veuillez saisir le type</option>
+            <option *ngFor="let poste of joueurPoste" [ngValue]="type">{{poste}}</option>
+        </select>
+    </div>
+    <input [disabled]="!validationFormJoueur.valid" type="submit" value="Envoyer" class="btn btn-success">
+  </form> -->

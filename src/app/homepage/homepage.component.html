@@ -1,0 +1,22 @@
+<div class="container py-3 mx-auto">
+    <div *ngIf="isLoading" class="text-center">
+        <i class="fas fa-spinner fa-spin"></i>
+        <span class="sr-only">Loading...</span>
+    </div>
+
+    <h1>Liste des joueurs</h1>
+
+    <div class="d-grid gap-2 col-4 mx-auto">
+        <!-- <a [routerLink]="['/joueur/add']" class="nav-link active" class="btn my-3 btn-success">Ajouter un joueur  <i class="fas fa-plus"></i></a> -->
+      </div>
+    <div *ngFor= "let joueur of joueurs" class="card" style="width: 18rem;">
+        <img src="{{joueur.image}}" class="card-img-top" alt="{{joueur.nom}}">
+        <div class="card-body">
+          <h5 class="card-title">{{joueur.nom}} {{joueur.prenom}}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">voir sa fiche détaillée</a>
+        </div>
+      </div>
+      
+
+</div>
