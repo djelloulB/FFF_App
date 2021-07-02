@@ -25,7 +25,7 @@ export class AddJoueurComponent implements OnInit {
   joueurSubmit() {
     console.log(this.joueurFormulaire);
     this.isLoading = true;
-    this.joueurService.add(this.joueurFormulaire).subscribe(data => {
+    this.joueurService.add(this.joueurFormulaire).subscribe((data: any) => {
     this.router.navigate(['/']);
     
     })
