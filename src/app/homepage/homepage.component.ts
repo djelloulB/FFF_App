@@ -15,8 +15,8 @@ export class HomepageComponent implements OnInit {
   constructor(private joueurService: JoueurService) { }
 
   ngOnInit(): void {
-    this.isLoading = true;
-    this.joueurService.getAll().subscribe(data =>{
+      this.isLoading = true;
+      this.joueurService.getAll().subscribe(data =>{
       this.joueurs = data;
       this.isLoading = false;
     })

@@ -6,14 +6,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { AddJoueurComponent } from './add-joueur/add-joueur/add-joueur.component';
-import { DeatailJoueurComponent } from './detail-joueur/deatail-joueur/deatail-joueur.component';
+import { DetailJoueurComponent } from './detail-joueur/detail-joueur/detail-joueur.component';
+import { MenuComponent } from './menu/menu/menu.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     AddJoueurComponent,
-    DeatailJoueurComponent
+    DetailJoueurComponent,
+    MenuComponent
+   
   ],
   imports: [
     BrowserModule,
