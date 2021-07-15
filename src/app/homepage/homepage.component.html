@@ -5,12 +5,13 @@
     </div>
 
     <h1 class="text-center">Liste des 23 joueurs</h1>
-
-    <div class="d-grid gap-2 col-4 mx-auto">
+    <div *ngIf= "displayAddButton"  >
+      <div class="d-grid gap-2 col-4 mx-auto">
         <a [routerLink]="['/add-joueur']" class="nav-link active btn my-3 btn-success">Ajouter un joueur  <i class="fas fa-plus"></i></a>
       </div>
+    </div>
     <div class="row">
-      <div *ngFor= "let joueur of joueurs" class="col-4 card m-4" >
+      <div *ngFor= "let joueur of joueurs" style="width: 18rem" class="col-4 card m-4 p-0" >
         <picture>
 
           <img src="{{joueur.image}}" class="card-img-top" alt="{{joueur.nom}}">
