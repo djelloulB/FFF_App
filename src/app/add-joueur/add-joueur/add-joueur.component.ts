@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Joueur } from 'src/app/models/joueur';
 import { JoueurService } from 'src/app/services/joueur.service';
+
 
 @Component({
   selector: 'app-add-joueur',
@@ -16,11 +18,11 @@ export class AddJoueurComponent implements OnInit {
   joueurPoste = [
     "gardien",
     "defenseur",
-    "millieu",
+    "milieu",
     "Attaquant"
   ]
 
-  constructor(private router: Router, private joueurService: JoueurService) { }
+  constructor(private router: Router, private joueurService: JoueurService, private notifier: ToastrService) { }
 
   ngOnInit(): void {
   }
@@ -28,8 +30,8 @@ export class AddJoueurComponent implements OnInit {
     console.log(this.joueurFormulaire);
     this.isLoading = true;
     this.joueurService.add(this.joueurFormulaire).subscribe((data: any) => {
+    this.notifier.success("Le joueur " + this.joueurFormulaire.prenom + " a bien été ajouté");  
     this.router.navigate(['/']);
-    this.notifier.success(this.annonceFormulaire.titre + " a bien été ajouté");  
     
     })
   }

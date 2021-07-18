@@ -21,6 +21,7 @@ export class DetailJoueurComponent implements OnInit {
   ngOnInit(): void {
     this.joueurService.getOne(this.id).subscribe((data?: Joueur)=> {
       this.joueur = data;
+      
     })
     
   }

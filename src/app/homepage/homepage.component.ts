@@ -11,7 +11,7 @@ export class HomepageComponent implements OnInit {
 
   joueurs?: Joueur[];
   isLoading = false;
-  displayAddButton = true;
+
   
   constructor(private joueurService: JoueurService) { }
   
@@ -19,9 +19,6 @@ export class HomepageComponent implements OnInit {
     this.isLoading = true;
     this.joueurService.getAll().subscribe(data =>{
       this.joueurs = data;
-      if (this.joueurs.length >= 23 ){
-        this.displayAddButton = false; 
-      }
       this.isLoading = false;
     })
   }

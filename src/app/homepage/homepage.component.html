@@ -1,21 +1,14 @@
-<div class="container py-3 mx-auto bg-white">
+<div class="container py-3 mx-auto bg-white bg-transparent">
     <div *ngIf="isLoading" class="text-center">
         <i class="fas fa-spinner fa-spin"></i>
         <span class="sr-only">Loading...</span>
     </div>
 
-    <h1 class="text-center">Liste des 23 joueurs</h1>
-    <div *ngIf= "displayAddButton"  >
-      <div class="d-grid gap-2 col-4 mx-auto">
-        <a [routerLink]="['/add-joueur']" class="nav-link active btn my-3 btn-success">Ajouter un joueur  <i class="fas fa-plus"></i></a>
-       
-        <div  [hidden]="displayAddButton">
-          <p>Votre équite est complète</p>
-        </div>
-      </div>
-    </div>
+    <h1 class="text-center ">Bonjour Didier !</h1>
+    <h2 class="text-center">Voici la liste de vos joueurs</h2>
+   
     <div class="row justify-content-around">
-      <div *ngFor= "let joueur of joueurs" style="width: 18rem" class="col-4 card m-4 p-0 shadowx" >
+      <div *ngFor= "let joueur of joueurs"  style="width: 18rem" class="col-4 card m-4 p-0 shadowx" >
         <picture>
 
           <img src="{{joueur.image}}" class="card-img-top" alt="{{joueur.nom}}">
@@ -29,7 +22,4 @@
           </div>
         </div>
     </div>
-
-      
-
 </div>

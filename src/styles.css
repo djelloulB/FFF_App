@@ -2,6 +2,18 @@
   margin: 0;
   padding: 0;
 }
+/* ************************* Generale ****************************** */
+h1,
+h2 {
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px red;
+  font-family: "poppins", sans-serif;
+}
+h1 {
+  font-size: 2em;
+  margin: 20px 0;
+}
 /* ********************* formulaire de validation ***************** */
 .ng-valid[required],
 .ng-valid.required {

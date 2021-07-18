@@ -1,9 +1,18 @@
-<article *ngIf=" joueur">
-    <h1> {{joueur.prenom}} {{joueur.nom}}</h1>
-    <img class="img-thumnail " width = "400px" src="{{joueur.image}} ">
-    <p>Poste: {{joueur.poste}} </p>
-    <p>Description: {{joueur.description}} </p>
-    <button *ngIf="joueur.id" (click)="delete(joueur.id)" class="btn btn-outline-danger ms-2" >Suppr.</button>
+<div *ngIf=" joueur" class="container py-5">
+    <h1 class="text-center"> {{joueur.prenom}} {{joueur.nom}}</h1>
 
-</article>
+    <article  class="bg-white p-5 mb-5 row justify-content-around">
+        <img class="img-thumnail col-4 " width = "400px" src="{{joueur.image}} ">
+        <div class="col-6">
+
+            <p>Poste: {{joueur.poste}} </p>
+            <p>Description: {{joueur.description}} </p>
+            <div class="align-bottom">
+
+            </div>
+            <button *ngIf="joueur.id" (click)="delete(joueur.id)" class="btn btn-outline-danger ms-2" >Suppr.</button>
+        </div>
+    
+    </article>
+</div>
 

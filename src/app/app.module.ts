@@ -9,6 +9,8 @@ import { AddJoueurComponent } from './add-joueur/add-joueur/add-joueur.component
 import { DetailJoueurComponent } from './detail-joueur/detail-joueur/detail-joueur.component';
 import { MenuComponent } from './menu/menu/menu.component';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -24,6 +26,8 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     HttpClientModule
   ],
   providers: [],
