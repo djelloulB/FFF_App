@@ -4,20 +4,19 @@
         <span class="sr-only">Loading...</span>
     </div>
 
-    <h1 class="text-center ">Bonjour Didier !</h1>
-    <h2 class="text-center">Voici la liste de vos joueurs</h2>
+    <h1 class="text-center">Bonjour Didier !</h1>
+    <h2 class="text-center mb-4">Voici la liste de vos joueurs</h2>
    
     <div class="row justify-content-around">
       <div *ngFor= "let joueur of joueurs"  style="width: 18rem" class="col-4 card m-4 p-0 shadowx" >
         <picture>
-
           <img src="{{joueur.image}}" class="card-img-top" alt="{{joueur.nom}}">
         </picture>
           <div class="card-body">
             <h5 class="card-title">{{joueur.prenom}} {{joueur.nom}}</h5>
             <p class="card-text">Poste : {{joueur.poste}}</p>
             <a [routerLink]="['/joueur', joueur.id]" class="btn btn-primary">voir sa fiche détaillée</a>
-            <button *ngIf="joueur.id" (click)="delete(joueur.id)" class="btn btn-outline-danger ms-2" >Suppr.</button>
+            <button *ngIf="joueur.id" (click)="delete(joueur.id)" class="btn btn-outline-danger ms-2" ><i class="far fa-trash-alt"></i></button>
             
           </div>
         </div>

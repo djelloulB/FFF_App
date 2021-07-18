@@ -4,7 +4,7 @@
       "id": 1,
       "nom": "Zidane",
       "prenom": "Zinedine",
-      "poste": "Millieur",
+      "poste": "Milieur",
       "description": "Champion du monde 98 et ballon dor 98",
       "image": "https://img.discogs.com/Ql81loG8u5m_KbafNLsZZAUvQNE=/600x709/smart/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/A-1375020-1272918870.jpeg.jpg"
     },
@@ -19,7 +19,7 @@
     {
       "nom": "Pogba",
       "prenom": "Paul",
-      "poste": "millieu",
+      "poste": "Milieu",
       "description": "Champion du monde 2018",
       "image": "https://www.foot01.com/img/images/650x600/2018/Jun/26/edf-pogba-scotche-tout-le-monde-avec-reponse-iconsport_icon_dib_210618_15_83,222991.jpg",
       "id": 3
@@ -35,7 +35,7 @@
     {
       "nom": "Lloris",
       "prenom": "Hugo",
-      "poste": "gardien",
+      "poste": "Gardien",
       "description": "Champion du monde 2018",
       "image": "https://upload.wikimedia.org/wikipedia/commons/3/3d/2020-03-10_Fu%C3%9Fball%2C_M%C3%A4nner%2C_UEFA_Champions_League_Achtelfinale%2C_RB_Leipzig_-_Tottenham_Hotspur_1DX_3687_by_Stepro.jpg",
       "id": 5
@@ -51,10 +51,26 @@
     {
       "nom": "Tolisso",
       "prenom": "Corentin",
-      "poste": "milieu",
+      "poste": "Milieu",
       "image": "https://i.pinimg.com/originals/5a/a1/db/5aa1db9ccd0d033cca3abd75e41ab041.jpg",
       "description": "Champion d'Allemagne et champion du monde 2018",
       "id": 7
+    },
+    {
+      "nom": "Martial",
+      "prenom": "Anthony",
+      "poste": "Attaquant",
+      "image": "https://fff.twic.pics/https://media.fff.fr/uploads/images/1ee187767de4ebb8f41e22c6212a3af9.png?twic=v1/focus=832x257",
+      "description": "Champion du monde 98",
+      "id": 8
+    },
+    {
+      "nom": "Digne",
+      "prenom": "Lucas",
+      "poste": "Défenseur",
+      "image": "https://i.skyrock.net/3910/91203910/pics/3275458726_1_2_sDp5uD4E.png",
+      "description": "Champion du Monde U20 (2013), Finaliste de l’Euro (2016)",
+      "id": 9
     }
   ]
 }

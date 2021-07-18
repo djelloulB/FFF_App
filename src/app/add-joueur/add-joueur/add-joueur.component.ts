@@ -16,9 +16,9 @@ export class AddJoueurComponent implements OnInit {
   joueurFormulaire = new Joueur();
   isLoading = false;
   joueurPoste = [
-    "gardien",
-    "defenseur",
-    "milieu",
+    "Gardien",
+    "Défenseur",
+    "Milieu",
     "Attaquant"
   ]
 

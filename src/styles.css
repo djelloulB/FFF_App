@@ -14,6 +14,9 @@ h1 {
   font-size: 2em;
   margin: 20px 0;
 }
+h2 {
+  font-size: 1.3em;
+}
 /* ********************* formulaire de validation ***************** */
 .ng-valid[required],
 .ng-valid.required {

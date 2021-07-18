@@ -16,7 +16,7 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
     this.joueurService.getAll().subscribe(data =>{
       this.joueurs = data;
-    if (this.joueurs.length >= 23 ){
+    if (this.joueurs.length >= 23){
       this.displayAddButton = false; 
     }
     
