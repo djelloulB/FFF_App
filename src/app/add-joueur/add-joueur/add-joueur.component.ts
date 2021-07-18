@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Joueur } from 'src/app/models/joueur';
+import { JoueurService } from 'src/app/services/joueur.service';
 
 @Component({
   selector: 'app-add-joueur',
@@ -11,14 +13,14 @@ export class AddJoueurComponent implements OnInit {
 
   joueurFormulaire = new Joueur();
   isLoading = false;
-  ajoueurPostee = [
+  joueurPoste = [
     "gardien",
     "defenseur",
     "millieu",
     "Attaquant"
   ]
 
-  constructor() { }
+  constructor(private router: Router, private joueurService: JoueurService) { }
 
   ngOnInit(): void {
   }
@@ -27,6 +29,7 @@ export class AddJoueurComponent implements OnInit {
     this.isLoading = true;
     this.joueurService.add(this.joueurFormulaire).subscribe((data: any) => {
     this.router.navigate(['/']);
+    this.notifier.success(this.annonceFormulaire.titre + " a bien été ajouté");  
     
     })
   }

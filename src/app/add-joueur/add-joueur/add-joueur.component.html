@@ -1,14 +1,14 @@
 <h1 class="text-center">Formulaire d'ajout de joueur</h1>
-<!-- <form #validationFormJoueur="ngForm" (ngSubmit)="joueurSubmit()">
+<form #validationFormJoueur="ngForm" (ngSubmit)="joueurSubmit()">
     <div class="form-group">
         <label for="titre">Nom du joueur</label>
-        <input class="form-control" type="text" #validationTitre="ngModel" required name="nom" [(ngModel)]="joueurFormulaire.nom">
-        <div class="alert alert-danger" [hidden]="validationTitre.valid">Ce champs n'est pas valide</div>
+        <input class="form-control" type="text" #validationNom="ngModel" required name="nom" [(ngModel)]="joueurFormulaire.nom">
+        <div class="alert alert-danger" [hidden]="validationNom.valid">Ce champs n'est pas valide</div>
     </div>
     <div class="form-group">
         <label for="description">Prénom du joueur</label>
-        <input type="text" class="form-control" #validationDescription="ngModel" required name="description" [(ngModel)]="joueurFormulaire.prenom">
-        <div class="alert alert-danger" [hidden]="validationDescription.valid">Ce champs n'est pas valide</div>
+        <input type="text" class="form-control" #validationPrenom="ngModel" required name="prenom" [(ngModel)]="joueurFormulaire.prenom">
+        <div class="alert alert-danger" [hidden]="validationPrenom.valid">Ce champs n'est pas valide</div>
     </div>
     <div class="form-group">
         <label for="image">Photo du joueur</label>
@@ -17,10 +17,11 @@
     </div>
     <div class="form-group">
         <label for="">Poste</label>
-        <select class="form-control" required name="type" #validationType="ngModel" [(ngModel)]="joueurFormulaire.poste">
-            <option [value]="undefined">Veuillez saisir le type</option>
-            <option *ngFor="let poste of joueurPoste" [ngValue]="type">{{poste}}</option>
+        <select class="form-control" required name="poste" #validationPoste="ngModel" [(ngModel)]="joueurFormulaire.poste">
+            <option [value]="undefined">Veuillez selectionnez le poste</option>
+            <option *ngFor="let poste of joueurPoste" [ngValue]="poste">{{poste}}</option>
         </select>
+        <div class="alert alert-danger" [hidden]="validationPoste.valid">Ce champs n'est pas valide</div>
     </div>
     <input [disabled]="!validationFormJoueur.valid" type="submit" value="Envoyer" class="btn btn-success">
-  </form> -->
+  </form>

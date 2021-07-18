@@ -8,6 +8,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { AddJoueurComponent } from './add-joueur/add-joueur/add-joueur.component';
 import { DetailJoueurComponent } from './detail-joueur/detail-joueur/detail-joueur.component';
 import { MenuComponent } from './menu/menu/menu.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -17,10 +18,10 @@ import { MenuComponent } from './menu/menu/menu.component';
     HomepageComponent,
     AddJoueurComponent,
     DetailJoueurComponent,
-    MenuComponent
-   
+    MenuComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule

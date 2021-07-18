@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Joueur } from 'src/app/models/joueur';
 import { JoueurService } from 'src/app/services/joueur.service';
 
@@ -14,7 +14,7 @@ export class DetailJoueurComponent implements OnInit {
   isLoading = false;
   joueur?: Joueur;
 
-  constructor(private activatedRoute: ActivatedRoute, private joueurService: JoueurService ) {
+  constructor(private activatedRoute: ActivatedRoute, private joueurService: JoueurService, private router: Router ) {
     this.id = parseInt(<string>this.activatedRoute.snapshot.paramMap.get('id')); 
   }
 
@@ -23,6 +23,14 @@ export class DetailJoueurComponent implements OnInit {
       this.joueur = data;
     })
     
+  }
+  delete(id: number){
+    this.isLoading = true;
+    this.joueurService.delete(id).subscribe(data => {
+    this.router.navigate(['/']);
+
+    } )
+
   }
 
 }

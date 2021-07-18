@@ -1,4 +1,4 @@
-<div class="container py-3 mx-auto">
+<div class="container py-3 mx-auto bg-white">
     <div *ngIf="isLoading" class="text-center">
         <i class="fas fa-spinner fa-spin"></i>
         <span class="sr-only">Loading...</span>
@@ -8,18 +8,24 @@
     <div *ngIf= "displayAddButton"  >
       <div class="d-grid gap-2 col-4 mx-auto">
         <a [routerLink]="['/add-joueur']" class="nav-link active btn my-3 btn-success">Ajouter un joueur  <i class="fas fa-plus"></i></a>
+       
+        <div  [hidden]="displayAddButton">
+          <p>Votre équite est complète</p>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div *ngFor= "let joueur of joueurs" style="width: 18rem" class="col-4 card m-4 p-0" >
+    <div class="row justify-content-around">
+      <div *ngFor= "let joueur of joueurs" style="width: 18rem" class="col-4 card m-4 p-0 shadowx" >
         <picture>
 
           <img src="{{joueur.image}}" class="card-img-top" alt="{{joueur.nom}}">
         </picture>
           <div class="card-body">
-            <h5 class="card-title">{{joueur.nom}} {{joueur.prenom}}</h5>
+            <h5 class="card-title">{{joueur.prenom}} {{joueur.nom}}</h5>
             <p class="card-text">Poste : {{joueur.poste}}</p>
             <a [routerLink]="['/joueur', joueur.id]" class="btn btn-primary">voir sa fiche détaillée</a>
+            <button *ngIf="joueur.id" (click)="delete(joueur.id)" class="btn btn-outline-danger ms-2" >Suppr.</button>
+            
           </div>
         </div>
     </div>

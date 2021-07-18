@@ -32,4 +32,10 @@ export class JoueurService {
     add(joueur: Joueur): Observable<Joueur> {
       return this.httpClient.post<Joueur>(this.apiUrl, joueur).pipe(retry(1), catchError(this.errorHandler));
     }
+    delete(id: number): Observable<Joueur> {
+      return this.httpClient.delete<Joueur>(this.apiUrl+'/'+id).pipe(
+        retry(1),
+        catchError(this.errorHandler)
+        );
+    }
 }
