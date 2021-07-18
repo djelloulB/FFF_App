@@ -1,4 +1,4 @@
-<div class="container py-3 mx-auto bg-white bg-transparent">
+<div class="container py-3 mx-auto">
     <div *ngIf="isLoading" class="text-center">
         <i class="fas fa-spinner fa-spin"></i>
         <span class="sr-only">Loading...</span>
@@ -8,11 +8,11 @@
     <h2 class="text-center mb-4">Voici la liste de vos joueurs</h2>
    
     <div class="row justify-content-around">
-      <div *ngFor= "let joueur of joueurs"  style="width: 18rem" class="col-4 card m-4 p-0 shadowx" >
+      <div *ngFor= "let joueur of joueurs"  style="width: 18rem" class="col-4 card m-4 p-0 shadow-lg " >
         <picture>
           <img src="{{joueur.image}}" class="card-img-top" alt="{{joueur.nom}}">
         </picture>
-          <div class="card-body">
+          <div class="card-body bg-white opacity">
             <h5 class="card-title">{{joueur.prenom}} {{joueur.nom}}</h5>
             <p class="card-text">Poste : {{joueur.poste}}</p>
             <a [routerLink]="['/joueur', joueur.id]" class="btn btn-primary">voir sa fiche détaillée</a>

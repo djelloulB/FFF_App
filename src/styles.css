@@ -26,6 +26,14 @@ h2 {
   border-left: 5px solid #a94442; /* red */
 }
 #bg-container {
-  background-image: url(assets/images/fff.jpeg);
+  /* background-image: url(assets/images/fff.jpeg); */
   background-position: center;
+  /* background: rgba(0, 0, 0, 0.082) url(assets/images/fff.jpeg); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.322), #353bddb7),
+    url(assets/images/fff.jpeg);
+}
+
+/* ********************* BG Opacity ********************************* */
+.opacity {
+  opacity: 0.96;
 }
